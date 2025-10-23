@@ -1,73 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BLM — Tentang Kami</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - BLM Poltekkes Mataram</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family:'Poppins',sans-serif; background:#0b0c10; color:white; }
+    header, footer { background:#000; text-align:center; padding:20px; }
+    nav a { color:white; margin:0 15px; text-decoration:none; }
+    nav a:hover { color:#FFD700; }
+    section { padding:80px 20px; max-width:900px; margin:auto; line-height:1.8; }
+    h1 { color:#FFD700; text-align:center; margin-bottom:30px; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- NAV (reuse same style) -->
-  <header class="bg-blue-800 text-white sticky top-0 z-50 shadow">
-    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="https://via.placeholder.com/48" alt="logo" class="w-10 h-10 rounded-full bg-white/10" />
-        <div>
-          <div class="font-bold">BLM Poltekkes Mataram</div>
-          <div class="text-xs text-white/80">Badan Legislatif Mahasiswa</div>
-        </div>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="index.html" class="nav-link hover:text-yellow-400">Beranda</a>
-        <a href="tentangkami.html" class="nav-link hover:text-yellow-400 active-page">Tentang Kami</a>
-        <a href="programkerja.html" class="nav-link hover:text-yellow-400">Program Kerja</a>
-        <a href="struktur.html" class="nav-link hover:text-yellow-400">Struktur BLM</a>
-        <a href="kontak.html" class="nav-link hover:text-yellow-400">Kontak</a>
-      </nav>
-    </div>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html" style="color:#FFD700;">Tentang Kami</a>
+      <a href="program.html">Program Kerja</a>
+      <a href="struktur.html">Struktur</a>
+      <a href="dokumentasi.html">Dokumentasi</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
   </header>
 
-  <!-- Hero small -->
-  <section class="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-14 text-center" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto px-6">
-      <h1 class="text-3xl font-bold">Tentang BLM Poltekkes Mataram</h1>
-      <p class="mt-3 text-sm md:text-base">Sejarah singkat, visi-misi, dan tugas BLM sebagai lembaga legislatif mahasiswa.</p>
-    </div>
+  <section>
+    <h1>Tentang Kami</h1>
+    <p>Badan Legislatif Mahasiswa (BLM) Poltekkes Kemenkes Mataram merupakan lembaga legislatif tertinggi di lingkungan kampus yang berperan sebagai pengawas, penyalur aspirasi, serta pengembang demokrasi mahasiswa.</p>
+    <p>Visi kami adalah menciptakan sistem kemahasiswaan yang transparan, aktif, dan berintegritas, serta memperkuat sinergi antara lembaga eksekutif dan legislatif mahasiswa.</p>
+    <p>Misi kami mencakup memperjuangkan suara mahasiswa, mengawasi kinerja organisasi, serta menjadi wadah diskusi dan pengembangan kebijakan kampus yang konstruktif.</p>
   </section>
 
-  <main class="max-w-6xl mx-auto px-6 py-12">
-    <section class="bg-white rounded-xl shadow p-6" data-aos="fade-up">
-      <h2 class="text-2xl font-bold text-blue-700">Sejarah Singkat</h2>
-      <p class="mt-3 text-gray-600">(Isi dengan sejarah BLM singkat — kapan berdiri, latar, dll.)</p>
-    </section>
-
-    <section class="bg-white rounded-xl shadow p-6 mt-6" data-aos="fade-up">
-      <h2 class="text-2xl font-bold text-blue-700">Visi & Misi</h2>
-      <p class="mt-3 text-gray-600 font-semibold">Visi:</p>
-      <p class="text-gray-600">Menjadi lembaga legislatif mahasiswa yang aspiratif, kritis, dan berintegritas.</p>
-
-      <p class="mt-3 text-gray-600 font-semibold">Misi:</p>
-      <ul class="list-disc ml-5 mt-2 text-gray-600">
-        <li>Menampung dan menindaklanjuti aspirasi mahasiswa.</li>
-        <li>Meningkatkan fungsi kontrol terhadap kebijakan kampus.</li>
-        <li>Menyelenggarakan program kerja yang berdampak bagi mahasiswa.</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="bg-blue-900 text-white py-6">
-    <div class="max-w-6xl mx-auto px-6 text-center text-sm">&copy; 2025 BLM Poltekkes Mataram</div>
+  <footer>
+    © 2025 BLM Poltekkes Mataram
   </footer>
-
-  <script>
-    lucide.createIcons();
-    AOS.init({ duration: 800, once: true });
-  </script>
 </body>
 </html>

@@ -1,154 +1,45 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BLM — Struktur Organisasi</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Struktur Organisasi - BLM Poltekkes Mataram</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    .card-hover { transition: transform .25s, box-shadow .25s; }
-    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.12); }
+    body { margin:0; font-family:'Poppins',sans-serif; background:#0b0c10; color:white; }
+    header, footer { background:#000; text-align:center; padding:20px; }
+    nav a { color:white; margin:0 15px; text-decoration:none; }
+    nav a:hover { color:#FFD700; }
+    section { padding:80px 20px; text-align:center; }
+    h1 { color:#FFD700; margin-bottom:30px; }
+    .card { display:inline-block; background:#111; margin:15px; padding:25px; border-radius:15px; width:220px; }
+    .card h3 { color:#FFD700; margin-bottom:10px; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <header class="bg-blue-800 text-white sticky top-0 z-50 shadow">
-    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="https://via.placeholder.com/48" alt="logo" class="w-10 h-10 rounded-full bg-white/10" />
-        <div>
-          <div class="font-bold">BLM Poltekkes Mataram</div>
-        </div>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="index.html" class="nav-link hover:text-yellow-400">Beranda</a>
-        <a href="tentangkami.html" class="nav-link hover:text-yellow-400">Tentang Kami</a>
-        <a href="programkerja.html" class="nav-link hover:text-yellow-400">Program Kerja</a>
-        <a href="struktur.html" class="nav-link hover:text-yellow-400 active-page">Struktur BLM</a>
-        <a href="kontak.html" class="nav-link hover:text-yellow-400">Kontak</a>
-      </nav>
-    </div>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang Kami</a>
+      <a href="program.html">Program Kerja</a>
+      <a href="struktur.html" style="color:#FFD700;">Struktur</a>
+      <a href="dokumentasi.html">Dokumentasi</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
   </header>
 
-  <section class="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-12 text-center" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto">
-      <h1 class="text-3xl font-bold">Struktur Organisasi</h1>
-      <p class="mt-2">Daftar BPH, CO tiap divisi, dan anggota</p>
-    </div>
+  <section>
+    <h1>Struktur Organisasi BLM</h1>
+    <div class="card"><h3>Ketua</h3><p>Nama Ketua</p></div>
+    <div class="card"><h3>Wakil Ketua</h3><p>Nama Wakil Ketua</p></div>
+    <div class="card"><h3>Sekretaris</h3><p>Nama Sekretaris</p></div>
+    <div class="card"><h3>Bendahara</h3><p>Nama Bendahara</p></div>
+    <div class="card"><h3>Komisi A</h3><p>Nama Ketua Komisi A</p></div>
+    <div class="card"><h3>Komisi B</h3><p>Nama Ketua Komisi B</p></div>
   </section>
 
-  <main class="max-w-6xl mx-auto px-6 py-12">
-    <!-- BPH (Baris 1) -->
-    <section data-aos="fade-up">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">Badan Pengurus Harian (BPH)</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        <!-- contoh Ketua -->
-        <div class="bg-white rounded-xl p-6 text-center card-hover">
-          <img src="https://via.placeholder.com/120" alt="Ketua" class="w-28 h-28 rounded-full mx-auto mb-3 object-cover" />
-          <h3 class="font-bold">Nama Ketua</h3>
-          <p class="text-sm text-gray-600">Ketua Umum</p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6 text-center card-hover">
-          <img src="https://via.placeholder.com/120" alt="Wakil" class="w-28 h-28 rounded-full mx-auto mb-3 object-cover" />
-          <h3 class="font-bold">Nama Wakil</h3>
-          <p class="text-sm text-gray-600">Wakil Ketua</p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6 text-center card-hover">
-          <img src="https://via.placeholder.com/120" alt="Sekretaris" class="w-28 h-28 rounded-full mx-auto mb-3 object-cover" />
-          <h3 class="font-bold">Nama Sekretaris</h3>
-          <p class="text-sm text-gray-600">Sekretaris Umum</p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6 text-center card-hover">
-          <img src="https://via.placeholder.com/120" alt="Bendahara" class="w-28 h-28 rounded-full mx-auto mb-3 object-cover" />
-          <h3 class="font-bold">Nama Bendahara</h3>
-          <p class="text-sm text-gray-600">Bendahara Umum</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CO per Divisi (Baris 2) -->
-    <section class="mt-8" data-aos="fade-up">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">Koordinator (CO) Tiap Divisi</h2>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        <!-- setiap CO ada foto + nama -->
-        <div class="bg-white rounded-xl p-6 text-center card-hover">
-          <img src="https://via.placeholder.com/100" alt="CO Humas" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover" />
-          <h3 class="font-bold">CO Humas</h3>
-          <p class="text-sm text-gray-600">Nama CO</p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6 text-center card-hover">
-          <img src="https://via.placeholder.com/100" alt="CO Advokasi" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover" />
-          <h3 class="font-bold">CO Advokasi</h3>
-          <p class="text-sm text-gray-600">Nama CO</p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6 text-center card-hover">
-          <img src="https://via.placeholder.com/100" alt="CO Kaderisasi" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover" />
-          <h3 class="font-bold">CO Kaderisasi</h3>
-          <p class="text-sm text-gray-600">Nama CO</p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6 text-center card-hover">
-          <img src="https://via.placeholder.com/100" alt="CO PSDM" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover" />
-          <h3 class="font-bold">CO PSDM</h3>
-          <p class="text-sm text-gray-600">Nama CO</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Anggota (hanya nama list per divisi) -->
-    <section class="mt-8" data-aos="fade-up">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">Anggota Tiap Divisi</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6">
-          <h4 class="font-semibold text-blue-700">Divisi Humas</h4>
-          <ul class="mt-3 text-sm text-gray-600 list-disc ml-5 space-y-1">
-            <li>Nama Anggota 1</li>
-            <li>Nama Anggota 2</li>
-            <li>Nama Anggota 3</li>
-          </ul>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h4 class="font-semibold text-blue-700">Divisi Advokasi</h4>
-          <ul class="mt-3 text-sm text-gray-600 list-disc ml-5 space-y-1">
-            <li>Nama Anggota 1</li>
-            <li>Nama Anggota 2</li>
-            <li>Nama Anggota 3</li>
-          </ul>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h4 class="font-semibold text-blue-700">Divisi Kaderisasi</h4>
-          <ul class="mt-3 text-sm text-gray-600 list-disc ml-5 space-y-1">
-            <li>Nama Anggota 1</li>
-            <li>Nama Anggota 2</li>
-            <li>Nama Anggota 3</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-blue-900 text-white py-6">
-    <div class="max-w-6xl mx-auto px-6 text-center text-sm">&copy; 2025 BLM Poltekkes Mataram</div>
+  <footer>
+    © 2025 BLM Poltekkes Mataram
   </footer>
-
-  <script>
-    lucide.createIcons();
-    AOS.init({ duration: 800, once: true });
-  </script>
 </body>
 </html>

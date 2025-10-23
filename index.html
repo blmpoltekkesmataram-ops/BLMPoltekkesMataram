@@ -1,162 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BLM Poltekkes Mataram — Beranda</title>
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Lucide icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - BLM Poltekkes Mataram</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* Minor custom */
-    .nav-link { transition: color .2s, background .2s; }
-    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(2,6,23,0.12); }
-    .active-page { color: #FFD43B; }
+    body { margin:0; font-family:'Poppins',sans-serif; background:#0b0c10; color:white; }
+    header, footer { background:#000; text-align:center; padding:20px; }
+    nav a { color:white; margin:0 15px; text-decoration:none; }
+    nav a:hover { color:#FFD700; }
+    section { padding:80px 20px; max-width:900px; margin:auto; line-height:1.8; }
+    h1 { color:#FFD700; text-align:center; margin-bottom:30px; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- NAVBAR -->
-  <header class="bg-blue-800 text-white sticky top-0 z-50 shadow">
-    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="https://via.placeholder.com/48" alt="logo" class="w-10 h-10 rounded-full bg-white/10" />
-        <div>
-          <div class="font-bold">BLM Poltekkes Mataram</div>
-          <div class="text-xs text-white/80">Badan Legislatif Mahasiswa</div>
-        </div>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="index.html" class="nav-link hover:text-yellow-400">Beranda</a>
-        <a href="tentangkami.html" class="nav-link hover:text-yellow-400">Tentang Kami</a>
-        <a href="programkerja.html" class="nav-link hover:text-yellow-400">Program Kerja</a>
-        <a href="struktur.html" class="nav-link hover:text-yellow-400">Struktur BLM</a>
-        <a href="kontak.html" class="nav-link hover:text-yellow-400">Kontak</a>
-      </nav>
-
-      <!-- mobile menu button -->
-      <div class="md:hidden">
-        <button id="btn-mobile" aria-label="menu" class="p-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-blue-700">
-      <div class="flex flex-col p-4 gap-2">
-        <a href="index.html" class="py-2 px-2 rounded hover:bg-blue-600">Beranda</a>
-        <a href="tentangkami.html" class="py-2 px-2 rounded hover:bg-blue-600">Tentang Kami</a>
-        <a href="programkerja.html" class="py-2 px-2 rounded hover:bg-blue-600">Program Kerja</a>
-        <a href="struktur.html" class="py-2 px-2 rounded hover:bg-blue-600">Struktur BLM</a>
-        <a href="kontak.html" class="py-2 px-2 rounded hover:bg-blue-600">Kontak</a>
-      </div>
-    </div>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html" style="color:#FFD700;">Tentang Kami</a>
+      <a href="program.html">Program Kerja</a>
+      <a href="struktur.html">Struktur</a>
+      <a href="dokumentasi.html">Dokumentasi</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="bg-gradient-to-r from-blue-700 to-blue-500 text-white">
-    <div class="max-w-6xl mx-auto px-6 py-20 text-center" data-aos="fade-up">
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Badan Legislatif Mahasiswa</h1>
-      <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto">Wadah aspirasi, kontrol, dan advokasi mahasiswa Poltekkes Kemenkes Mataram.</p>
-      <div class="mt-8 flex justify-center gap-4">
-        <a href="struktur.html" class="bg-yellow-400 text-blue-900 font-semibold px-6 py-2 rounded-lg shadow hover:bg-yellow-300">Lihat Struktur</a>
-        <a href="programkerja.html" class="border border-white/30 px-6 py-2 rounded-lg hover:bg-white/10">Program Kerja</a>
-      </div>
-    </div>
+  <section>
+    <h1>Tentang Kami</h1>
+    <p>Badan Legislatif Mahasiswa (BLM) Poltekkes Kemenkes Mataram merupakan lembaga legislatif tertinggi di lingkungan kampus yang berperan sebagai pengawas, penyalur aspirasi, serta pengembang demokrasi mahasiswa.</p>
+    <p>Visi kami adalah menciptakan sistem kemahasiswaan yang transparan, aktif, dan berintegritas, serta memperkuat sinergi antara lembaga eksekutif dan legislatif mahasiswa.</p>
+    <p>Misi kami mencakup memperjuangkan suara mahasiswa, mengawasi kinerja organisasi, serta menjadi wadah diskusi dan pengembangan kebijakan kampus yang konstruktif.</p>
   </section>
 
-  <!-- MAIN CONTENT -->
-  <main class="max-w-6xl mx-auto px-6 py-12">
-    <!-- three feature cards -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-xl p-6 card-hover" data-aos="fade-up">
-        <div class="flex items-center gap-4">
-          <i data-lucide="speaker" class="text-blue-600"></i>
-          <h3 class="font-semibold text-lg">Aspirasi Mahasiswa</h3>
-        </div>
-        <p class="mt-3 text-sm text-gray-600">Menampung dan menindaklanjuti aspirasi mahasiswa untuk kebijakan yang berpihak pada mahasiswa.</p>
-      </div>
-
-      <div class="bg-white rounded-xl p-6 card-hover" data-aos="fade-up" data-aos-delay="100">
-        <div class="flex items-center gap-4">
-          <i data-lucide="gavel" class="text-blue-600"></i>
-          <h3 class="font-semibold text-lg">Fungsi Legislasi</h3>
-        </div>
-        <p class="mt-3 text-sm text-gray-600">Menghasilkan rekomendasi, peraturan internal, dan pengawasan terhadap kebijakan mahasiswa.</p>
-      </div>
-
-      <div class="bg-white rounded-xl p-6 card-hover" data-aos="fade-up" data-aos-delay="200">
-        <div class="flex items-center gap-4">
-          <i data-lucide="users" class="text-blue-600"></i>
-          <h3 class="font-semibold text-lg">Kolaborasi Organisasi</h3>
-        </div>
-        <p class="mt-3 text-sm text-gray-600">Bekerja sama dengan organisasi lain untuk program kerja yang berdampak luas.</p>
-      </div>
-    </div>
-
-    <!-- quick links / tabs mini -->
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <a href="tentangkami.html" class="block bg-white p-6 rounded-xl shadow hover:scale-[1.01]" data-aos="fade-up">
-        <h4 class="font-semibold text-blue-700">Tentang Kami</h4>
-        <p class="text-sm text-gray-600 mt-2">Sejarah, visi-misi, dan tugas BLM.</p>
-      </a>
-      <a href="programkerja.html" class="block bg-white p-6 rounded-xl shadow hover:scale-[1.01]" data-aos="fade-up" data-aos-delay="80">
-        <h4 class="font-semibold text-blue-700">Program Kerja</h4>
-        <p class="text-sm text-gray-600 mt-2">Agenda kerja dan jadwal kegiatan tahunan.</p>
-      </a>
-      <a href="struktur.html" class="block bg-white p-6 rounded-xl shadow hover:scale-[1.01]" data-aos="fade-up" data-aos-delay="160">
-        <h4 class="font-semibold text-blue-700">Struktur Organisasi</h4>
-        <p class="text-sm text-gray-600 mt-2">Pengurus inti, koordinator divisi, dan anggota.</p>
-      </a>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-blue-900 text-white py-8 mt-12">
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div>
-        <h4 class="font-bold">BLM Poltekkes Mataram</h4>
-        <p class="text-sm mt-2 text-white/80">Sekretariat: Kampus Poltekkes Kemenkes Mataram</p>
-      </div>
-      <div>
-        <h4 class="font-semibold">Link Cepat</h4>
-        <ul class="mt-2 text-sm space-y-1">
-          <li><a href="index.html" class="hover:text-yellow-400">Beranda</a></li>
-          <li><a href="struktur.html" class="hover:text-yellow-400">Struktur BLM</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold">Kontak</h4>
-        <p class="text-sm mt-2">Email: blm.poltekkes@example.com</p>
-      </div>
-    </div>
-    <div class="text-center text-xs text-white/60 mt-6">© 2025 BLM Poltekkes Mataram — All rights reserved</div>
+  <footer>
+    © 2025 BLM Poltekkes Mataram
   </footer>
-
-  <!-- SCRIPTS -->
-  <script>
-    // mobile toggle
-    const btnMobile = document.getElementById('btn-mobile');
-    const mobileMenu = document.getElementById('mobile-menu');
-    btnMobile.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // init icons & animations
-    lucide.createIcons();
-    AOS.init({ duration: 800, once: true });
-  </script>
 </body>
 </html>
