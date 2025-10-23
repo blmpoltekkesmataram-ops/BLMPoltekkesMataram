@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BLM Poltekkes Mataram</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -24,7 +25,6 @@
       color: #fff;
       text-align: center;
       padding: 3rem 1rem;
-      position: relative;
     }
 
     header h1 {
@@ -54,26 +54,27 @@
       color: #fff;
       text-decoration: none;
       font-weight: 500;
+      cursor: pointer;
       transition: 0.3s;
     }
 
-    nav a:hover {
+    nav a:hover, nav a.active {
       color: #FFD700;
     }
 
-    section {
+    .tab-content {
+      display: none;
       max-width: 1000px;
       margin: 3rem auto;
       background: #fff;
       border-radius: 15px;
       padding: 2rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-      animation: fadeIn 1.2s ease-in-out;
+      animation: fadeIn 0.8s ease-in-out;
     }
 
-    section:hover {
-      transform: translateY(-3px);
+    .tab-content.active {
+      display: block;
     }
 
     h2 {
@@ -92,7 +93,6 @@
       padding: 1rem;
       font-size: 0.9rem;
       margin-top: 3rem;
-      animation: fadeInUp 1.2s ease-in-out;
     }
 
     @keyframes fadeIn {
@@ -122,37 +122,243 @@
     }
   </style>
 </head>
+
 <body>
+<section class="container mx-auto mt-10 px-4">
+  <h2 class="text-2xl font-bold text-center mb-4 text-blue-700">Informasi BLM</h2>
+
+  <!-- Tabs -->
+  <div class="flex justify-center mb-6">
+    <button class="tab-button bg-blue-600 text-white px-4 py-2 rounded-l-lg" onclick="openTab('profil')">Profil</button>
+    <button class="tab-button bg-blue-500 text-white px-4 py-2" onclick="openTab('program')">Program Kerja</button>
+    <button class="tab-button bg-blue-500 text-white px-4 py-2" onclick="openTab('struktur')">Struktur Organisasi</button>
+    <button class="tab-button bg-blue-500 text-white px-4 py-2 rounded-r-lg" onclick="openTab('dokumentasi')">Dokumentasi</button>
+  </div>
+
+  <!-- Tab Content -->
+  <div id="profil" class="tab-content">
+    <h3 class="text-xl font-semibold mb-2">Profil BLM</h3>
+    <p>BLM merupakan lembaga legislatif mahasiswa yang berperan dalam penyaluran aspirasi, pengawasan kinerja organisasi, serta penjaga nilai demokrasi di lingkungan kampus.</p>
+  </div>
+
+  <div id="program" class="tab-content hidden">
+    <h3 class="text-xl font-semibold mb-2">Program Kerja</h3>
+    <ul class="list-disc ml-5">
+      <li>Rapat Dengar Pendapat Mahasiswa (RDPM)</li>
+      <li>Forum Aspirasi Mahasiswa</li>
+      <li>Pengawasan Eksekutif Mahasiswa</li>
+      <li>Pelatihan Legislatif Mahasiswa</li>
+    </ul>
+  </div>
+
+  <div id="struktur" class="tab-content hidden">
+    <h3 class="text-xl font-semibold mb-2">Struktur Organisasi</h3>
+    <p>Struktur organisasi BLM terdiri dari Ketua, Wakil Ketua, Sekretaris, Bendahara, dan Komisi-Komisi bidang kerja.</p>
+  </div>
+
+  <div id="dokumentasi" class="tab-content hidden">
+    <h3 class="text-xl font-semibold mb-2">Dokumentasi</h3>
+    <p>Berisi foto-foto kegiatan BLM seperti rapat, pelatihan, dan kegiatan kampus lainnya.</p>
+  </div>
+</section>
+
+<!-- Script Tabs -->
+<script>
+  function openTab(tabId) {
+    // Sembunyikan semua konten tab
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.classList.add('hidden'));
+
+    // Ubah warna tombol
+    const buttons = document.querySelectorAll('.tab-button');
+    buttons.forEach(btn => btn.classList.remove('bg-blue-600'));
+    buttons.forEach(btn => btn.classList.add('bg-blue-500'));
+
+    // Tampilkan tab aktif
+    document.getElementById(tabId).classList.remove('hidden');
+    event.target.classList.add('bg-blue-600');
+  }
+</script>
 
   <header>
     <h1>BADAN LEGISLATIF MAHASISWA</h1>
     <p>Poltekkes Kemenkes Mataram</p>
   </header>
 
+<!-- Tambahkan library Lucide di bagian <head> -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<section class="container mx-auto mt-10 px-4">
+  <h2 class="text-2xl font-bold text-center mb-6 text-blue-700">Informasi BLM Poltekkes Mataram</h2>
+
+  <!-- Tombol Tabs -->
+  <div class="flex justify-center mb-8 flex-wrap gap-2">
+    <button class="tab-button bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-all duration-300" onclick="openTab('profil', event)">
+      <i data-lucide="users"></i> Profil
+    </button>
+    <button class="tab-button bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-all duration-300" onclick="openTab('program', event)">
+      <i data-lucide="clipboard-list"></i> Program Kerja
+    </button>
+    <button class="tab-button bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-all duration-300" onclick="openTab('struktur', event)">
+      <i data-lucide="layout-dashboard"></i> Struktur
+    </button>
+    <button class="tab-button bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-all duration-300" onclick="openTab('dokumentasi', event)">
+      <i data-lucide="image"></i> Dokumentasi
+    </button>
+  </div>
+
+  <!-- Konten Tabs -->
+  <div id="profil" class="tab-content opacity-100 translate-y-0 transition-all duration-500">
+    <h3 class="text-xl font-semibold mb-3">Profil BLM</h3>
+    <p>BLM merupakan lembaga legislatif mahasiswa yang berperan dalam menyalurkan aspirasi, melakukan pengawasan terhadap organisasi kemahasiswaan, serta menegakkan nilai-nilai demokrasi di lingkungan kampus Poltekkes Mataram.</p>
+  </div>
+
+  <div id="program" class="tab-content hidden opacity-0 translate-y-4 transition-all duration-500">
+    <h3 class="text-xl font-semibold mb-3">Program Kerja</h3>
+    <ul class="list-disc ml-5 space-y-1">
+      <li>Rapat Dengar Pendapat Mahasiswa (RDPM)</li>
+      <li>Forum Aspirasi Mahasiswa</li>
+      <li>Pelatihan Legislatif Mahasiswa</li>
+      <li>Pengawasan Eksekutif Mahasiswa</li>
+    </ul>
+  </div>
+
+  <div id="struktur" class="tab-content hidden opacity-0 translate-y-4 transition-all duration-500">
+    <h3 class="text-xl font-semibold mb-3">Struktur Organisasi</h3>
+    <p>Struktur organisasi BLM terdiri dari Ketua, Wakil Ketua, Sekretaris, Bendahara, serta Komisi-komisi yang menjalankan fungsi legislatif di bidangnya masing-masing.</p>
+  </div>
+
+  <div id="dokumentasi" class="tab-content hidden opacity-0 translate-y-4 transition-all duration-500">
+    <h3 class="text-xl font-semibold mb-3">Dokumentasi Kegiatan</h3>
+    <p>Berisi dokumentasi kegiatan seperti rapat pleno, sidang paripurna, dan kegiatan sosial mahasiswa BLM Poltekkes Mataram.</p>
+  </div>
+</section>
+
+<!-- Script Tabs dengan Efek Animasi -->
+<script>
+  function openTab(tabId, event) {
+    const tabs = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-button');
+
+    tabs.forEach(tab => {
+      tab.classList.add('hidden');
+      tab.classList.remove('opacity-100', 'translate-y-0');
+      tab.classList.add('opacity-0', 'translate-y-4');
+    });
+
+    buttons.forEach(btn => btn.classList.remove('bg-blue-600'));
+    buttons.forEach(btn => btn.classList.add('bg-blue-500'));
+
+    const activeTab = document.getElementById(tabId);
+    activeTab.classList.remove('hidden');
+    setTimeout(() => {
+      activeTab.classList.add('opacity-100', 'translate-y-0');
+      activeTab.classList.remove('opacity-0', 'translate-y-4');
+    }, 100);
+
+    event.target.closest('button').classList.add('bg-blue-600');
+  }
+
+  // Inisialisasi ikon Lucide
+  lucide.createIcons();
+</script>
+
+<section class="container mx-auto mt-10 px-4">
+  <h2 class="text-2xl font-bold text-center mb-4 text-blue-700">Informasi BLM</h2>
+
+  <!-- Tombol Tabs -->
+  <div class="flex justify-center mb-6">
+    <button class="tab-button bg-blue-600 text-white px-4 py-2 rounded-l-lg transition-all duration-300" onclick="openTab('profil', event)">Profil</button>
+    <button class="tab-button bg-blue-500 text-white px-4 py-2 transition-all duration-300" onclick="openTab('program', event)">Program Kerja</button>
+    <button class="tab-button bg-blue-500 text-white px-4 py-2 transition-all duration-300" onclick="openTab('struktur', event)">Struktur Organisasi</button>
+    <button class="tab-button bg-blue-500 text-white px-4 py-2 rounded-r-lg transition-all duration-300" onclick="openTab('dokumentasi', event)">Dokumentasi</button>
+  </div>
+
+  <!-- Konten Tabs -->
+  <div id="profil" class="tab-content opacity-100 translate-y-0 transition-all duration-500">
+    <h3 class="text-xl font-semibold mb-2">Profil BLM</h3>
+    <p>BLM merupakan lembaga legislatif mahasiswa yang berperan dalam penyaluran aspirasi, pengawasan organisasi kemahasiswaan, serta sebagai penegak nilai-nilai demokrasi di lingkungan kampus.</p>
+  </div>
+
+  <div id="program" class="tab-content hidden opacity-0 translate-y-4 transition-all duration-500">
+    <h3 class="text-xl font-semibold mb-2">Program Kerja</h3>
+    <ul class="list-disc ml-5">
+      <li>Rapat Dengar Pendapat Mahasiswa (RDPM)</li>
+      <li>Forum Aspirasi Mahasiswa</li>
+      <li>Pengawasan Eksekutif Mahasiswa</li>
+      <li>Pelatihan Legislatif Mahasiswa</li>
+    </ul>
+  </div>
+
+  <div id="struktur" class="tab-content hidden opacity-0 translate-y-4 transition-all duration-500">
+    <h3 class="text-xl font-semibold mb-2">Struktur Organisasi</h3>
+    <p>Struktur organisasi BLM terdiri dari Ketua, Wakil Ketua, Sekretaris, Bendahara, serta berbagai Komisi yang mengatur bidang kerja masing-masing.</p>
+  </div>
+
+  <div id="dokumentasi" class="tab-content hidden opacity-0 translate-y-4 transition-all duration-500">
+    <h3 class="text-xl font-semibold mb-2">Dokumentasi</h3>
+    <p>Berisi foto-foto kegiatan BLM seperti rapat pleno, sidang paripurna, serta kegiatan sosial mahasiswa di kampus Poltekkes Mataram.</p>
+  </div>
+</section>
+
+<!-- Script Tabs dengan Efek Animasi -->
+<script>
+  function openTab(tabId, event) {
+    const tabs = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-button');
+
+    // Reset semua tab
+    tabs.forEach(tab => {
+      tab.classList.add('hidden');
+      tab.classList.remove('opacity-100', 'translate-y-0');
+      tab.classList.add('opacity-0', 'translate-y-4');
+    });
+
+    // Reset warna tombol
+    buttons.forEach(btn => btn.classList.remove('bg-blue-600'));
+    buttons.forEach(btn => btn.classList.add('bg-blue-500'));
+
+    // Tampilkan tab aktif
+    const activeTab = document.getElementById(tabId);
+    activeTab.classList.remove('hidden');
+    setTimeout(() => {
+      activeTab.classList.add('opacity-100', 'translate-y-0');
+      activeTab.classList.remove('opacity-0', 'translate-y-4');
+    }, 100); // delay biar smooth
+
+    // Ganti warna tombol aktif
+    event.target.classList.add('bg-blue-600');
+  }
+</script>
+
   <nav>
-    <a href="#beranda">Beranda</a>
-    <a href="#tentang">Tentang Kami</a>
-    <a href="#program">Program Kerja</a>
-    <a href="#kontak">Kontak</a>
+    <a class="tab-link active" data-tab="beranda">Beranda</a>
+    <a class="tab-link" data-tab="tentang">Tentang Kami</a>
+    <a class="tab-link" data-tab="program">Program Kerja</a>
+    <a class="tab-link" data-tab="struktur">Struktur BLM</a>
+    <a class="tab-link" data-tab="kontak">Kontak</a>
   </nav>
 
-  <section id="beranda">
+  <!-- BERANDA -->
+  <div id="beranda" class="tab-content active">
     <h2>Selamat Datang di Website Resmi BLM Poltekkes Mataram</h2>
     <p>
       BLM merupakan lembaga legislatif mahasiswa yang berfungsi sebagai wadah aspirasi, pengawasan, dan pengembangan demokrasi kampus.
       Website ini menjadi sarana informasi, publikasi kegiatan, dan komunikasi antar mahasiswa.
     </p>
-  </section>
+  </div>
 
-  <section id="tentang">
+  <!-- TENTANG -->
+  <div id="tentang" class="tab-content">
     <h2>Tentang Kami</h2>
     <p>
       Badan Legislatif Mahasiswa (BLM) Poltekkes Kemenkes Mataram berdiri sebagai lembaga perwakilan mahasiswa
       yang bertugas mengawasi kebijakan lembaga eksekutif serta menjadi jembatan antara mahasiswa dan pihak institusi.
     </p>
-  </section>
+  </div>
 
-  <section id="program">
+  <!-- PROGRAM -->
+  <div id="program" class="tab-content">
     <h2>Program Kerja</h2>
     <ul>
       <li>Sidang Umum Mahasiswa (SUM)</li>
@@ -160,17 +366,39 @@
       <li>Pelatihan Legislasi Mahasiswa</li>
       <li>Kajian Isu Kampus</li>
     </ul>
-  </section>
+  </div>
 
-  <section id="kontak">
-    <h2>Kontak</h2>
+  <!-- STRUKTUR -->
+  <div id="struktur" class="tab-content">
+    <h2>Struktur Kepengurusan BLM</h2>
+    <p>Bagian ini nanti berisi daftar struktur BPH dan Divisi lengkap dengan foto Ketua dan CO Divisi.</p>
+  </div>
+
+  <!-- KONTAK -->
+  <div id="kontak" class="tab-content">
+    <h2>Kontak Kami</h2>
     <p>Email: blm@poltekkesmataram.ac.id</p>
     <p>Instagram: <a href="https://instagram.com/blmpolkesram" target="_blank">@blmpolkesram</a></p>
-  </section>
+  </div>
 
   <footer>
     © 2025 BLM Poltekkes Mataram | Semua Hak Dilindungi
   </footer>
+
+  <script>
+    const tabs = document.querySelectorAll(".tab-link");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.tab).classList.add("active");
+      });
+    });
+  </script>
 
 </body>
 </html>
