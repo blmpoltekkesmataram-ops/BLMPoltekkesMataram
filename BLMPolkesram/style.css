@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b0c10;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.navbar h1 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: #eee;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 400;
+}
+
+nav a:hover, .active {
+  color: #00b4d8;
+}
+
+/* Hero Section (Parallax) */
+.hero {
+  background: url('assets/bg-blm.jpg') center/cover fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.hero-content h2 {
+  font-size: 1.4em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.1em;
+  color: #ddd;
+}
+
+/* Konten Umum */
+.content {
+  padding: 120px 60px;
+  min-height: 100vh;
+  background: #0b0c10;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 2.2em;
+  color: #00b4d8;
+  margin-bottom: 20px;
+}
+
+.content p {
+  color: #ccc;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.intro {
+  background-color: #111;
+  padding: 100px 60px;
+  text-align: center;
+}
+
+/* Tombol */
+.back-btn a {
+  background-color: #00b4d8;
+  color: #0b0c10;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.back-btn a:hover {
+  background-color: #0096c7;
+  transform: scale(1.05);
+}
+
+/* Kartu & Galeri */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  background: #111;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #999;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
