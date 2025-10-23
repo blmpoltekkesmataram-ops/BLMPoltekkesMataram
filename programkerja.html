@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BLM — Program Kerja</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-blue-800 text-white sticky top-0 z-50 shadow">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="https://via.placeholder.com/48" alt="logo" class="w-10 h-10 rounded-full bg-white/10" />
+        <div>
+          <div class="font-bold">BLM Poltekkes Mataram</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" class="nav-link hover:text-yellow-400">Beranda</a>
+        <a href="tentangkami.html" class="nav-link hover:text-yellow-400">Tentang Kami</a>
+        <a href="programkerja.html" class="nav-link hover:text-yellow-400 active-page">Program Kerja</a>
+        <a href="struktur.html" class="nav-link hover:text-yellow-400">Struktur BLM</a>
+        <a href="kontak.html" class="nav-link hover:text-yellow-400">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-12 text-center" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-3xl font-bold">Program Kerja</h1>
+      <p class="mt-2">Rangkaian kegiatan dan agenda kerja BLM</p>
+    </div>
+  </section>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <article class="bg-white p-6 rounded-xl shadow" data-aos="fade-up">
+        <h3 class="font-bold text-blue-700">Rapat Dengar Pendapat Mahasiswa (RDPM)</h3>
+        <p class="mt-2 text-gray-600">Deskripsi singkat, tujuan, serta jadwal pelaksanaan RDPM.</p>
+      </article>
+
+      <article class="bg-white p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="80">
+        <h3 class="font-bold text-blue-700">Pelatihan Legislasi Mahasiswa</h3>
+        <p class="mt-2 text-gray-600">Workshop dan pelatihan bagi anggota dan calon legislatif mahasiswa.</p>
+      </article>
+
+      <article class="bg-white p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="160">
+        <h3 class="font-bold text-blue-700">Forum Aspirasi</h3>
+        <p class="mt-2 text-gray-600">Event berkala untuk menampung keluh kesah dan aspirasi mahasiswa.</p>
+      </article>
+
+      <article class="bg-white p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="240">
+        <h3 class="font-bold text-blue-700">Pengawasan Eksekutif Mahasiswa</h3>
+        <p class="mt-2 text-gray-600">Mekanisme pengawasan kebijakan organisasi eksekutif mahasiswa.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="bg-blue-900 text-white py-6">
+    <div class="max-w-6xl mx-auto px-6 text-center text-sm">&copy; 2025 BLM Poltekkes Mataram</div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>
